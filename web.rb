@@ -37,6 +37,8 @@ post '/lingr_bot' do
 			url = text
 			file = "./temp/lingr_#{Time.now.to_i}.png"
 			`phantomjs lingr_history_image.js #{url} #{file}`
+
+			gyazo = Gyazo.new ""
 			result = gyazo.upload file
 			return result
 		end
