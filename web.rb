@@ -22,7 +22,7 @@ end
 
 
 def lingr_history_url? (url)
-	return /^http:\/\/lingr.com\/room\/vim\/archives\/\d{4}\/\d{2}\/\d{2}#message-\d+$/ =~ url
+	return /^http:\/\/lingr.com\/room\/.+\/archives\/\d{4}\/\d{2}\/\d{2}#message-\d+$/ =~ url
 end
 
 
