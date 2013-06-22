@@ -16,6 +16,11 @@ get '/lingr_history_image' do
 end
 
 
+get '/phantomjs' do
+	`phantomjs --version`
+end
+
+
 def lingr_history_url? (url)
 	return /^http:\/\/lingr.com\/room\/vim\/archives\/\d{4}\/\d{2}\/\d{2}#message-\d+$/ =~ url
 end
