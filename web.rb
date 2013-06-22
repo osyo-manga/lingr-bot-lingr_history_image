@@ -12,7 +12,7 @@ end
 
 
 get '/lingr_history_image' do
-
+	"lingr_history_image"
 end
 
 
@@ -21,7 +21,7 @@ def lingr_history_url? (url)
 end
 
 
-post '/reading_vimrc' do
+post '/lingr_bot' do
 	content_type :text
 	json = JSON.parse(request.body.string)
 	json["events"].select {|e| e['message'] }.map {|e|
