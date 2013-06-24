@@ -61,7 +61,6 @@ post '/lingr_bot' do
 	json = JSON.parse(request.body.string)
 	json["events"].select {|e| e['message'] }.map {|e|
 		text = e["message"]["text"]
-		room = 
 
 		if lingr_history_url? text
 			post_lingr(text, e["message"]["room"])
